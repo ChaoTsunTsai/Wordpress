@@ -1,1 +1,1 @@
-# Wordpress
+#Database: MySQL, Apache, phpmyadmin
