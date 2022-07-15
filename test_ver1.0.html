@@ -1,0 +1,70 @@
+<!DOCTYPE = html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <link rel="shortcut icon" href="../icon/V5_icon.png" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!--<script src="../ckeditor4-releases-master/ckeditor4-releases-master/ckeditor.js"></script>
+    <script src="../ckeditor4-releases-master/ckeditor4-releases-master/config.js"></script>-->
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+    <title>V5-新聞稿 ver 1.0</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="../icon/V5_icon.png" width="70px" />
+    </div>
+    <div class="news_title"></div>
+    <div class="row news absolute-center">
+      <form id="news_content" method="post" action="../php/test_ver1.0.php">
+        <h5 class="news_title">新聞標題</h5>
+        <textarea name="news_title" class="title_textarea"></textarea>
+        <h5 class="news_content">新聞內容</h5>
+        <textarea name="news_content" class="editor" id="editor"></textarea>
+        <h5 class="news_excerpt">新聞摘要</h5>
+        <textarea name="news_excerpt" class="excerpt_textarea"></textarea>
+        <div class="btn">
+          <input type="submit" name="submit" class="bg-primary" />
+        </div>
+      </form>
+    </div>
+    <script>
+      CKEDITOR.replace("editor", {
+        toolbarGroups: [
+          { name: "clipboard", groups: ["undo", "clipboard"] },
+          {
+            name: "editing",
+            groups: ["find", "selection", "spellchecker", "editing"],
+          },
+          { name: "basicstyles", groups: ["basicstyles", "cleanup"] },
+          { name: "links", groups: ["links"] },
+          { name: "insert", groups: ["insert"] },
+          { name: "forms", groups: ["forms"] },
+          { name: "others", groups: ["others"] },
+          {
+            name: "paragraph",
+            groups: ["list", "indent", "blocks", "align", "bidi", "paragraph"],
+          },
+          { name: "document", groups: ["mode", "document", "doctools"] },
+          //{ name: 'tools', groups: ['tools'] },
+          { name: "styles", groups: ["styles"] },
+          { name: "colors", groups: ["colors"] },
+        ],
+        height: 680,
+        removePlugins: "resize",
+        format_tags: "p;h1;h2;h3;pre",
+
+        // Simplify the dialog windows.
+        removeDialogTabs: "image:advanced;link:advanced",
+        removeDialogTabs: "image:advanced;image:Link",
+        removeButtons: "Paste,PasteText,PasteFromWord",
+      });
+    </script>
+  </body>
+  <footer>
+    <div class="row">
+      <p>Copyright &copy 2022 by V5 Tecnologies</p>
+    </div>
+  </footer>
+</html>
