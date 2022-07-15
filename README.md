@@ -1,1 +1,2 @@
-#Database: MySQL, Apache, phpmyadmin
+Database: MySQL, Apache, phpmyadmin
+Editor: CKEditor 4
