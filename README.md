@@ -1,2 +1,2 @@
-Database: MySQL, Apache, phpmyadmin
-Editor: CKEditor 4
+WordPress.org
+CKEditor 4
